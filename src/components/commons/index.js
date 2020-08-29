@@ -5,3 +5,4 @@ export * from "./FilterForm";
 export * from "./FormError";
 export * from "./Span";
 export * from "./Footer";
+export * from "./Reset";

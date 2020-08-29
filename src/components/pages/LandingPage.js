@@ -36,7 +36,7 @@ export function LandingPage(props) {
 
           <Grid.Row>
             <Grid.Column width={11} className="landing-section">
-              <Image fluid src="../../images/text-editor.jpg" />
+              <Image fluid src="../../images/school.jpg" />
 
               {/* <iframe
                 width="1280"
@@ -65,7 +65,7 @@ export function LandingPage(props) {
               <h2> Canvas</h2>
             </Grid.Column>
             <Grid.Column width={11}>
-              <Image fluid src="../../images/canvas.jpg" />
+              <Image fluid src="../../images/school.jpg" />
             </Grid.Column>
           </Grid.Row>
 

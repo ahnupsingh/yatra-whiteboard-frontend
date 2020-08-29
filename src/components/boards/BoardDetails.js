@@ -10,7 +10,7 @@ export function BoardDetails(props) {
     const [addingSection, setAddingSection] = useState(false);
     const idx = props.match.params.idx;
 
-    const response = {
+    const uResponse = {
         extras: {
             "1948738880afdlk": {
                 type: "text-editor",
@@ -32,7 +32,7 @@ export function BoardDetails(props) {
         if (idx !== undefined) {
             getBoardDetails(idx).then((response) => {
                 debugger;
-                const boardValues = Object.entries(response.data.extras).map(
+                const boardValues = Object.entries(uResponse.extras).map(
                     ([k, v]) => {
                         return { key: k, ...v };
                     }
@@ -65,6 +65,7 @@ export function BoardDetails(props) {
                                             color="red"
                                             className="right floated"
                                             onClick={() => {
+                                                debugger;
                                                 var array = sections;
                                                 array = array.splice(index, 1);
                                                 setSections(array);
@@ -80,6 +81,7 @@ export function BoardDetails(props) {
                                             idx={idx}
                                             keyID={section.key}
                                             initialValue={section.data}
+                                            {...props}
                                         ></TextEditor>
                                     </Card.Content>
                                 </Card>

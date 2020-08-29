@@ -22,7 +22,7 @@ import { compose } from "recompose";
 import _ from "lodash";
 import moment from "moment";
 
-const Listing = ({ values }) => {
+const Listing = ({ values = [] }) => {
     debugger;
     return (
         <List divided verticalAlign="middle" className="listings">

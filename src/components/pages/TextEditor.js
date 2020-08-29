@@ -49,9 +49,10 @@ export const TextEditor = (props) => {
         <Fragment>
             <Menu>
                 <Menu.Item
-                    onClick={() =>
-                        setLanguage(language == "nepali" ? "" : "nepali")
-                    }
+                    onClick={() => {
+                        setLanguage(language == "nepali" ? "" : "nepali");
+                        props.setGlobal("_typingNepali", true);
+                    }}
                 >
                     <div>
                         <i className="sliders horizontal link icon" /> Nepali

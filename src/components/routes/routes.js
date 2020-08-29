@@ -6,6 +6,7 @@ import { Login, Signup } from "../auth";
 import { UsersList, UserForm, UserProfile, UserDetails } from "../users";
 import { BoardList, BoardDetails } from "../boards";
 import { TextEditor, CanvasEditor, LandingPage } from "../pages";
+import { ResetLocal } from "../commons/Reset";
 
 const user_permissions = [
     ["user-list", "post"],
@@ -59,6 +60,13 @@ const routes = [
     {
         path: "/board/:idx",
         component: BoardDetails,
+        accessible: true,
+        exact: true,
+    },
+
+    {
+        path: "/reset",
+        component: ResetLocal,
         accessible: true,
         exact: true,
     },

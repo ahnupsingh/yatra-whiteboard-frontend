@@ -29,7 +29,7 @@ export function getBoardDetails(idx) {
 }
 
 export function updateBoard(idx, values) {
-    return api_put({
+    return api_patch({
         url: "BOARD_DETAIL",
         idx: idx,
         data: values,
